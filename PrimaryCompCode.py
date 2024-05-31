@@ -71,7 +71,7 @@ while True:
         speakText("The time now is"+hour)
     elif "query" in command:
         import google.generativeai as genai
-        API_KEY="AIzaSyBw9XItC3IWYjKHm6oSyhnpNX4AoLp1s9A"
+        API_KEY="key"
         genai.configure(api_key=API_KEY)
         model=genai.GenerativeModel('gemini-pro') 
         chat = model.start_chat(history=[])
@@ -211,7 +211,7 @@ while True:
         cap.release()
         cv2.destroyAllWindows()
     elif "weather" in command:
-        api_key = "00b7bb8bc26151ed56b82b8299344a0d"
+        api_key = "key"
         base_url = "http://api.openweathermap.org/data/2.5/weather?"
         print("pls tell me the City name ")
         speakText("pls tell me the City name ")
@@ -238,22 +238,14 @@ while True:
             speakText("tell me the colour")
             col=record_text()
             if "red" in col:
-                requests.get("https://blr1.blynk.cloud/external/api/update?token=QQz3_5vanCMx3PRzFNtd07DJ5L3KQuIi&v0=1")
-                requests.get("https://blr1.blynk.cloud/external/api/update?token=QQz3_5vanCMx3PRzFNtd07DJ5L3KQuIi&v1=0")
-                requests.get("https://blr1.blynk.cloud/external/api/update?token=QQz3_5vanCMx3PRzFNtd07DJ5L3KQuIi&v2=0")
+                requests.get("key")
+                requests.get("key")
+                requests.get("key")
             elif "green" in col:
-                requests.get("https://blr1.blynk.cloud/external/api/update?token=QQz3_5vanCMx3PRzFNtd07DJ5L3KQuIi&v0=0")
-                requests.get("https://blr1.blynk.cloud/external/api/update?token=QQz3_5vanCMx3PRzFNtd07DJ5L3KQuIi&v1=1")
-                requests.get("https://blr1.blynk.cloud/external/api/update?token=QQz3_5vanCMx3PRzFNtd07DJ5L3KQuIi&v2=0")
+               
             elif "red" in col:
-                requests.get("https://blr1.blynk.cloud/external/api/update?token=QQz3_5vanCMx3PRzFNtd07DJ5L3KQuIi&v0=0")
-                requests.get("https://blr1.blynk.cloud/external/api/update?token=QQz3_5vanCMx3PRzFNtd07DJ5L3KQuIi&v1=0")
-                requests.get("https://blr1.blynk.cloud/external/api/update?token=QQz3_5vanCMx3PRzFNtd07DJ5L3KQuIi&v2=1")
+                
             elif "off" in col:
-                requests.get("https://blr1.blynk.cloud/external/api/update?token=QQz3_5vanCMx3PRzFNtd07DJ5L3KQuIi&v0=0")
-                requests.get("https://blr1.blynk.cloud/external/api/update?token=QQz3_5vanCMx3PRzFNtd07DJ5L3KQuIi&v1=0")
-                requests.get("https://blr1.blynk.cloud/external/api/update?token=QQz3_5vanCMx3PRzFNtd07DJ5L3KQuIi&v2=0")
-    elif "down" in command:
-        print("Shutting Down")
+                
         speakText("Shutting Down")
         exit()
